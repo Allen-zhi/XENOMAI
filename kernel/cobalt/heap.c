@@ -149,19 +149,19 @@ enum xnheap_pgtype {
 	page_list =2
 };
 
-static inline u32 __always_inline
+static u32 __always_inline
 gen_block_mask(int log2size)
 {
 	return -1U >> (32 - (XNHEAP_PAGE_SIZE >> log2size));
 }
 
-static inline  __always_inline
+static __always_inline
 int addr_to_pagenr(struct xnheap *heap, void *p)
 {
 	return ((void *)p - heap->membase) >> XNHEAP_PAGE_SHIFT;
 }
 
-static inline  __always_inline
+static __always_inline
 void *pagenr_to_addr(struct xnheap *heap, int pg)
 {
 	return heap->membase + (pg << XNHEAP_PAGE_SHIFT);

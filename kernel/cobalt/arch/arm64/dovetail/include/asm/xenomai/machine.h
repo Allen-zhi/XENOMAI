@@ -16,7 +16,7 @@
 
 static inline __attribute_const__ unsigned long ffnz(unsigned long ul)
 {
-	int __r;
+	unsigned long __r;
 
 	/* zero input is not valid */
 	XENO_WARN_ON(COBALT, ul == 0);

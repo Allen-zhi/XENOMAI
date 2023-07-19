@@ -24,6 +24,7 @@
 #include <boilerplate/libc.h>
 #include <copperplate/clockobj.h>
 #include <xenomai/init.h>
+#include <stdbool.h>
 
 #ifdef HAVE_FORK
 #define do_fork fork
